@@ -1,0 +1,61 @@
+<div class="container">
+  <div class="row">
+    <div class="col-12">
+      <h2 class="text-center">Add Employee</h2>
+      <form [formGroup]="employeeForm" (ngSubmit)="handleAdd()">
+        <div class="mb-3">
+          <label for="first_name" class="form-label">First Name</label>
+          <input type="text" class="form-control" id="first_name" formControlName="first_name">
+          <div class="invalid-feedback" *ngIf="employeeForm.get('first_name')?.invalid && (employeeForm.get('first_name')?.dirty || employeeForm.get('first_name')?.touched)">
+            <div *ngIf="employeeForm.get('first_name')?.errors?.['required']">
+              Please enter a first name.
+            </div>
+          </div>
+        </div>
+        <div class="mb-3">
+          <label for="last_name" class="form-label">Last Name</label>
+          <input type="text" class="form-control" id="last_name" formControlName="last_name">
+          <div class="invalid-feedback" *ngIf="employeeForm.get('last_name')?.invalid && (employeeForm.get('last_name')?.dirty || employeeForm.get('last_name')?.touched)">
+            <div *ngIf="employeeForm.get('last_name')?.errors?.['required']">
+              Please enter a last name.
+            </div>
+          </div>
+        </div>
+        <div class="mb-3">
+          <label for="email" class="form-label">Email</label>
+          <input type="email" class="form-control" id="email" formControlName="email">
+          <div class="invalid-feedback" *ngIf="employeeForm.get('email')?.invalid && (employeeForm.get('email')?.dirty || employeeForm.get('email')?.touched)">
+            <div *ngIf="employeeForm.get('email')?.errors?.['required']">
+              Please enter an email.
+            </div>
+          </div>
+        </div>
+        <div class="mb-3">
+          <label for="gender" class="form-label">Gender</label>
+          <select class="form-control" id="gender" formControlName="gender">
+            <option value="" disabled selected>Select a gender</option>
+            <option value="Male">Male</option>
+            <option value="Female">Female</option>
+            <option value="Other">Other</option>
+          </select>
+          <div class="invalid-feedback" *ngIf="employeeForm.get('gender')?.invalid && (employeeForm.get('gender')?.dirty || employeeForm.get('gender')?.touched)">
+            <div *ngIf="employeeForm.get('gender')?.errors?.['required']">
+              Please select a gender.
+            </div>
+          </div>
+        </div>
+        <div class="mb-3">
+          <label for="salary" class="form-label">Salary</label>
+          <input type="text" class="form-control" id="salary" formControlName="salary">
+          <div class="invalid-feedback" *ngIf="employeeForm.get('salary')?.invalid && (employeeForm.get('salary')?.dirty || employeeForm.get('salary')?.touched)">
+            <div *ngIf="employeeForm.get('salary')?.errors?.['required']">
+              Please enter a salary.
+            </div>
+          </div>
+        </div>
+        <button type="submit" class="btn btn-success me-1">Add Employee</button>
+        <button type="button" (click)="handleCancel()" class="btn btn-danger">Cancel</button>
+      </form>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,37 @@
+<div class="container">
+  <div class="row">
+    <div class="col-12">
+      <h2 class="text-center">Employee List</h2>
+      <button type="button" class="btn btn-primary mb-3" (click)="handleAdd()">Add Employee</button>
+      <table class="table table-striped-columns bg-body-secondary table-light table-hover" *ngIf="employees && employees.length">
+        <thead class="table table-bordered table-danger">
+          <tr>
+            <th class="table-dark">ID</th>
+            <th class="table-warning">First Name</th>
+            <th class="table-info">Last Name</th>
+            <th class="table-danger">Email</th>
+            <th class="table-primary">Gender</th>
+            <th class="table-secondary">Salary</th>
+            <th class="table-success">Action</th>
+          </tr>
+        </thead>
+        <tbody class="table-group-divider">
+          <tr *ngFor="let employee of employees">
+            <td class="table-primary">{{ employee.id }}</td>
+            <td class="text-center">{{ employee.first_name }}</td>
+            <td class="text-center">{{ employee.last_name }}</td>
+            <td class="table-info">{{ employee.email }}</td>
+            <td class="text-center">{{ employee.gender }}</td>
+            <td class="table-light">{{ employee.salary | currency }}</td>
+            <td class="text-center">
+              <button type="button" class="btn btn-primary me-2" (click)="handleEdit(employee)">Edit</button>
+              <button type="button" class="btn btn-secondary me-2" (click)="handleView(employee)">View</button>
+              <button type="button" class="btn btn-danger" (click)="handleDelete(employee.id)">Delete</button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <p class="text-center" *ngIf="!(employees && employees.length)">No employees found.</p>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,94 @@
+<section class="vh-100 gradient-custom">
+  <div class="container py-5 h-100">
+    <div class="row d-flex justify-content-center align-items-center h-100">
+      <div class="col-12 col-md-8 col-lg-6 col-xl-5">
+        <div class="card bg-light text-black">
+          <div class="card-body p-5 text-center">
+            <div class="mb-md-5 mt-md-4 pb-5">
+              <h2 class="fw-bold mb-2 text-uppercase">Update Employee</h2>
+
+              <form [formGroup]="employeeForm">
+                <div class="form-outline form-black mb-4">
+                  <input
+                    formControlName="first_name"
+                    type="text"
+                    id="first_name"
+                    class="form-control form-control-lg"
+                    required
+                  />
+                  <label class="form-label" for="first_name">First Name</label>
+                </div>
+
+                <div class="form-outline form-black mb-4">
+                  <input
+                    formControlName="last_name"
+                    type="text"
+                    id="last_name"
+                    class="form-control form-control-lg"
+                    required
+                  />
+                  <label class="form-label" for="last_name">Last Name</label>
+                </div>
+
+                <div class="form-outline form-black mb-4">
+                  <input
+                    formControlName="email"
+                    type="email"
+                    id="email"
+                    class="form-control form-control-lg"
+                    required
+                  />
+                  <label class="form-label" for="email">Email</label>
+                </div>
+
+                <div class="form-outline form-black mb-4">
+                  <select
+                    formControlName="gender"
+                    id="gender"
+                    class="form-control form-control-lg"
+                    required
+                  >
+                    <option value="" disabled>Select a gender</option>
+                    <option value="Male">Male</option>
+                    <option value="Female">Female</option>
+                    <option value="Other">Other</option>
+                  </select>
+                  <label class="form-label" for="gender">Gender</label>
+                </div>
+
+                <div class="form-outline form-black mb-4">
+                  <input
+                    formControlName="salary"
+                    type="text"
+                    id="salary"
+                    class="form-control form-control-lg"
+                    required
+                  />
+                  <label class="form-label" for="salary">Salary</label>
+                </div>
+
+                <button
+                  class="btn btn-outline-dark btn-lg px-5"
+                  (click)="handleSave()"
+                  type="button"
+                  [disabled]="employeeForm.invalid"
+                >
+                  Update Employee
+                </button>
+                <br />
+                <br />
+                <button
+                  class="btn btn-outline-danger btn-lg px-5"
+                  routerLink="/employee-list"
+                  type="button"
+                >
+                  Cancel
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

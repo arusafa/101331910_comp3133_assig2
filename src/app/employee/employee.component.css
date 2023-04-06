@@ -1,0 +1,49 @@
+/* Styles for employee table */
+.employee-table {
+    border: 3px solid #f4d9d9;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+.employee-table-body td, .employee-table-body th {
+    border: 1px solid #a40404;
+    padding: 8px;
+}
+
+.employee-table-body td {
+    font-size: 30px;
+}
+
+.employee-table-body th {
+    background-color: #faecec;
+    color: #6d3232;
+    font-size: 18px;
+}
+
+/* Styles for employee data */
+.employee-label {
+    font-weight: bold;
+}
+
+.employee-data {
+    font-style: italic;
+}
+
+/* Styles for employee button */
+.employee-button {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    width: 50%;
+}
+
+th{
+    text-align: center;
+    font-weight: bold;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+th tr{
+    text-align: center;
+    font-weight: 300;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}

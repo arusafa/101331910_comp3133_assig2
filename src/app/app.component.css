@@ -1,0 +1,17 @@
+.navbar-brand{
+    font-size: 1.4em;
+    background-image: linear-gradient(315deg, #f8d2c1 0%, #e7fcfd 74%);
+    color: #290808;
+    padding: 0.5em;
+    border-radius: 1.4em;
+    margin-left: 0.5em;
+    margin-right: 0.5em;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+    font-weight: bold;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    font-family: 'Merriweather', serif;
+    box-shadow: #ffd4d4 8px 8px 5px 4px;
+}

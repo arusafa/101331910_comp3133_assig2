@@ -1,0 +1,72 @@
+.gradient-custom {
+    background-color: #f5a07b;
+    background-image: linear-gradient(315deg, #e9a78b 0%, #c4f2f5 74%);
+  }
+  
+  .card {
+    box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.1);
+  }
+  
+  .card-header {
+    background-color: #f8f9fa;
+    border-bottom: none;
+  }
+  
+  .card-footer {
+    background-color: #f8f9fa;
+    border-top: none;
+  }
+  
+  .form-outline {
+    position: relative;
+  }
+  
+  
+  .form-outline input:focus {
+    border-bottom: 2px solid #ff8474;
+  }
+  
+  .form-outline label {
+    top: 10px;
+    left: 15px;
+    color: #999;
+    font-size: 16px;
+    font-weight: 400;
+  }
+  
+  .form-outline input:focus ~ label,
+  .form-outline input:not(:placeholder-shown) ~ label {
+    transform: translateY(-2px);
+    font-size: 18px;
+    font-weight: 600;
+    color: #ff8474;
+  }
+  
+  .btn-outline-dark {
+    color: #000000;
+    border-color: #02e921;
+    background-color: #02e921;
+  }
+  
+  .btn-outline-dark:hover,
+  .btn-outline-dark:focus,
+  .btn-outline-dark:active {
+    color: #333;
+    border-color: #333;
+    background-color: #39a304;
+  }
+  
+  .btn-outline-danger {
+    color: #ffffff;
+    border-color: #b18e8e;
+    background-color: #800101;
+  }
+  
+  .btn-outline-danger:hover,
+  .btn-outline-danger:focus,
+  .btn-outline-danger:active {
+    color: #d80808;
+    border-color: #fff;
+    background-color: #020202;
+  }
+  
